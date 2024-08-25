@@ -5,8 +5,8 @@ import { ref, defineProps, defineEmits } from 'vue'
 
 const name = ref('')
 
-const props = defineProps ({
-    pokemon: Object,
+const props = defineProps({
+  pokemon: Object,
 })
 
 
@@ -14,12 +14,12 @@ const props = defineProps ({
 
 <template>
 
-<div class="card" style="width: 18rem;">
-  <!-- <img  class="card-img-top" alt="photo"> -->
-  <div class="card-body text-center">
-    <h5 class="card-title">{{ props.pokemon.name }}</h5>
-    <a href="#" class="btn btn-primary mt-2">Details</a>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body text-center">
+      <h5 class="card-title">{{ props.pokemon.name }}</h5>
+      <h6>ID : {{ props.pokemon.id }}</h6>
+      <a :href="`http://localhost:5173/pokemon/${props.pokemon.id}`" class="btn btn-primary mt-2">Details</a>
+    </div>
   </div>
-</div>
 
 </template>

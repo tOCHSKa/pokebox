@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import NotFound from './views/NotFound.vue'
 import About from './views/About.vue'
 import PokemonList from './views/PokemonList.vue'
+import PokemonDetail from './views/PokemonDetail.vue'
 
 const routes = [
     {
@@ -26,6 +27,11 @@ const routes = [
         name: 'pokemons',
         id: 'id',
         component: PokemonList
+    },
+    {
+        path: '/pokemon/:id',
+        name: 'PokemonDetail',
+        component: PokemonDetail
     }
 ]
 
